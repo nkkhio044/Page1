@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ArYan Web</title>
+<title>ArYan Profile</title>
 <style>
     body {
         margin: 0;
@@ -15,20 +15,27 @@
         align-items: center;
         height: 100vh;
     }
-    .profile-card {
+    a {
+        text-decoration: none;
+        color: inherit;
         width: 100%;
-        height: 100vh;
+        height: 100%;
+        display: block;
+    }
+    .profile-card {
+        width: 95%;
+        max-width: 420px;
+        height: 95vh;
         background: rgba(255, 255, 255, 0.05);
-        border-left: 4px solid #ff4081; /* Side line */
+        border-left: 4px solid #ff4081;
         overflow: hidden;
         box-shadow: 0 10px 25px rgba(0,0,0,0.6);
         backdrop-filter: blur(10px);
         position: relative;
-        cursor: pointer;
-        transition: transform 0.3s ease;
+        transition: transform 0.15s ease;
     }
-    .profile-card:hover {
-        transform: scale(1.01);
+    .profile-card:active {
+        transform: scale(0.97); /* Tap effect */
     }
     .profile-img {
         position: absolute;
@@ -75,22 +82,28 @@
         font-size: 22px;
         opacity: 0.9;
         z-index: 3;
+        animation: neonGlow 1.5s infinite alternate;
+    }
+    @keyframes neonGlow {
+        0% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+        100% { text-shadow: 0 0 15px #0ff, 0 0 25px #0ff; }
     }
 </style>
 </head>
 <body>
 
-<div class="profile-card" onclick="window.location.href='http://de3.bot-hosting.net:20023/">
-    <img src="https://i.ibb.co/7tNNMYcZ/1755296885480.jpg" alt="ArYan.x3" class="profile-img">
-    <div class="overlay">
-        <div class="title">Illuminati boY</div>
-        <div class="date">14 Farbari Back DaY, 2023</div>
-        <div class="tagline">Home of Server PosT Web</div>
-        <div class="credit">Developed by ArYan.x3 Web Developer <#3</div>
+<a href="http://de3.bot-hosting.net:20023/">
+    <div class="profile-card">
+        <img src="https://i.ibb.co/7tNNMYcZ/1755296885480.jpg" alt="ArYan" class="profile-img">
+        <div class="overlay">
+            <div class="title">Illuminati boY</div>
+            <div class="date">14 Farbari Back DaY, 2023</div>
+            <div class="tagline">Home of Server PosT Web</div>
+            <div class="credit">Developed by ArYan.x3 Web Developer <#3</div>
+        </div>
+        <div class="wifi">ᯤ⁹⁹⁹⁺</div>
     </div>
-    <div class="wifi">ᯤ⁹⁹⁹⁺</div>
-</div>
+</a>
 
 </body>
-  </html>
-  
+</html>
